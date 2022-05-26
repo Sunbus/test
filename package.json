@@ -1,0 +1,57 @@
+{
+  "name": "test-project",
+  "title": "Test Project",
+  "description": "Test Project to see something",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Aliaksar Katovich",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "default": "index.html",
+  "homepage": "https://github.com/Sunbus/test#readme",
+  "scripts": {
+    "start": "rimraf ./.parcel-cache && parcel src/index.html --port 8080",
+    "build": "rimraf ./.parcel-cache ./dist && parcel build src/index.html --public-url ./ --no-source-maps && node .version.js"
+  },
+  "dependencies": {
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.13.2",
+    "classnames": "^2.3.1",
+    "html-entities": "^2.3.3",
+    "observable-hooks": "^4.2.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0",
+    "react-tsparticles": "^2.0.6",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.5.5",
+    "tsparticles": "^2.0.6",
+    "typedi": "^0.10.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-less": "^2.6.0",
+    "@types/react": "^17.0.45",
+    "@types/react-cookiebot": "^1.0.1",
+    "@types/react-dom": "^17.0.16",
+    "@types/react-helmet": "^6.1.5",
+    "less": "^4.1.2",
+    "parcel": "^2.5.0",
+    "postcss": "^8.4.13",
+    "postcss-modules": "^4.3.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.4"
+  },
+  "targets": {
+    "main": false
+  },
+  "alias": {
+    "process": false,
+    "@module": "./src/module",
+    "@models/*": "./src/models/$1",
+    "@view/*": "./src/view/$1",
+    "@usecases": "./src/usecases",
+    "@repository": "./src/repository"
+  }
+}
